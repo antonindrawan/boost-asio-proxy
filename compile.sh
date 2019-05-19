@@ -10,3 +10,7 @@ cd ${output_dir}
 cmake -G Ninja ${source_dir}
 cmake --build ${output_dir}
 
+# Run it
+# ./proxy <thread count> <port> <ip address>
+# e.g.
+# ./proxy 2 10001 127.0.0.1
