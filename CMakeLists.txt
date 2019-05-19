@@ -9,7 +9,7 @@ IF(Boost_FOUND)
   LINK_DIRECTORIES(${Boost_LIBRARY_DIRS})
 ENDIF(Boost_FOUND)
 
-SET(USED_LIBS ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBRARY})
+SET(USED_LIBS ${Boost_SYSTEM_LIBRARY} ${Boost_THREAD_LIBRARY} ${Boost_REGEX_LIBRARY} pthread)
 
 ADD_EXECUTABLE(proxy proxy.cpp proxy-server.cpp proxy-conn.cpp)
 TARGET_LINK_LIBRARIES(proxy ${USED_LIBS})
